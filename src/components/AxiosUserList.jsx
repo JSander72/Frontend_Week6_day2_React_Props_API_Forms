@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import ReusableButton from './ReusableButton'
 import axios from 'axios'
+import '../styles.css'
 
 const AxiosUserList = () => {
   // Initializing the users state with an empty array
@@ -53,11 +54,11 @@ const AxiosUserList = () => {
       }
 
       { selectedUserInfo && 
-        <div>
+        <div  className='card'>
             <h3>Selected User</h3>
-            <p>{selectedUser.name.firstname}</p>
-            <p>{selectedUser.name.lastname}</p>
-            <p>{selectedUser.name.email}</p>
+            <p>{selectedUserInfo.name.firstname}</p>
+            <p>{selectedUserInfo.name.lastname}</p>
+            <p>{selectedUserInfo.name.email}</p>
         </div>
       }
 
